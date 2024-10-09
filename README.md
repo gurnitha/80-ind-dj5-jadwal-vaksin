@@ -43,3 +43,8 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
 
 
 ## 3. SETTINGS
+
+#### 1. Menseting bahasa dan waktu
+
+        modified:   README.md
+        modified:   config/settings.py
