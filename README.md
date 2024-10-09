@@ -40,3 +40,6 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
         renamed:    config/config/urls.py -> config/urls.py
         renamed:    config/config/wsgi.py -> config/wsgi.py
         renamed:    config/manage.py -> manage.py
+
+
+## 3. SETTINGS
