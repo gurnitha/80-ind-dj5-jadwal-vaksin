@@ -30,3 +30,13 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
         new file:   config/config/urls.py
         new file:   config/config/wsgi.py
         new file:   config/manage.py
+
+#### 2. Memodifikasi struktur proyek
+
+        modified:   README.md
+        renamed:    config/config/__init__.py -> config/__init__.py
+        renamed:    config/config/asgi.py -> config/asgi.py
+        renamed:    config/config/settings.py -> config/settings.py
+        renamed:    config/config/urls.py -> config/urls.py
+        renamed:    config/config/wsgi.py -> config/wsgi.py
+        renamed:    config/manage.py -> manage.py
