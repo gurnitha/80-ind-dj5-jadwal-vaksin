@@ -80,3 +80,24 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
 
         (venv312511) λ python manage.py check
         System check identified no issues (0 silenced).
+
+
+## 4. DATABASE
+
+#### 1. Membuat mysql database
+
+        λ mysql -u root
+        Welcome to the MySQL monitor.  Commands end with ; or \g.
+        Your MySQL connection id is 35
+        Server version: 8.0.30 MySQL Community Server - GPL
+
+        Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+        Oracle is a registered trademark of Oracle Corporation and/or its
+        affiliates. Other names may be trademarks of their respective
+        owners.
+
+        Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+        mysql> CREATE DATABASE ind_80_dj5_jadual_vaksin;
+        Query OK, 1 row affected (0.42 sec)
