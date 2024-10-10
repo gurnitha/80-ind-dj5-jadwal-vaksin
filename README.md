@@ -101,3 +101,22 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
 
         mysql> CREATE DATABASE ind_80_dj5_jadual_vaksin;
         Query OK, 1 row affected (0.42 sec)
+
+#### 2. Menseting path untuk menghubungan proyek ke database
+
+        DATABASES = {
+            'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'ind_80_dj5_jadual_vaksin',
+            'USER': 'root',
+            'PASSWORD': '',
+            'HOST':'localhost',
+            'PORT':'3306',
+            }
+        }
+
+        (venv312511) λ python manage.py check
+        ...
+        raise ImproperlyConfigured(
+        django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module.
+        Did you install mysqlclient?

@@ -146,4 +146,16 @@ MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
 
+# Menseting path untuk menghubungan proyek ke database
+DATABASES = {
+    'default': {
+    'ENGINE': 'django.db.backends.mysql',
+    'NAME': 'ind_80_dj5_jadual_vaksin',
+    'USER': 'root',
+    'PASSWORD': '',
+    'HOST':'localhost',
+    'PORT':'3306',
+    }
+}
+
 # ----------------- Added new scripts ends -----------------
