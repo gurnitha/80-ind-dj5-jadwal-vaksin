@@ -120,3 +120,16 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
         raise ImproperlyConfigured(
         django.core.exceptions.ImproperlyConfigured: Error loading MySQLdb module.
         Did you install mysqlclient?
+
+#### 3. Menginstal mysqlclient
+
+        (venv312511) λ pip install mysqlclient
+        Collecting mysqlclient
+          Using cached mysqlclient-2.2.4-cp312-cp312-win_amd64.whl.metadata (4.6 kB)
+
+        Using cached mysqlclient-2.2.4-cp312-cp312-win_amd64.whl (203 kB)
+        Installing collected packages: mysqlclient
+        Successfully installed mysqlclient-2.2.4
+
+        (venv312511) λ python manage.py check
+        System check identified no issues (0 silenced).
