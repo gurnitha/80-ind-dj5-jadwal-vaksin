@@ -135,4 +135,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Menseting bahasa dan waktu
 LANGUAGE_CODE = 'id'
 TIME_ZONE = 'Asia/Jakarta'
+
+# Menseting absolute path untuk file statis
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [STATIC_DIR, ]
+STATIC_URL = 'static/'
 # ----------------- Added new scripts ends -----------------
