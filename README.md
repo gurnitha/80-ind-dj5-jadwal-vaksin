@@ -133,3 +133,8 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
 
         (venv312511) λ python manage.py check
         System check identified no issues (0 silenced).
+
+#### 4. Melindungi file penting
+
+        modified:   README.md
+        modified:   config/settings.py

@@ -20,13 +20,18 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+import environ
+env = environ.Env()
+environ.Env.read_env()
+
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-@0l9(24a_h=-2-+&6n3dgs%*&)nk05(327n9&009gy$0m4un35'
-
+# SECRET_KEY = 'django-insecure-@0l9(24a_h=-2-+&6n3dgs%*&)nk05(327n9&009gy$0m4un35'
+# SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -147,15 +152,34 @@ MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
 
 # Menseting path untuk menghubungan proyek ke database
+# DATABASES = {
+#     'default': {
+#     'ENGINE': 'django.db.backends.mysql',
+#     'NAME': 'ind_80_dj5_jadual_vaksin',
+#     'USER': 'root',
+#     'PASSWORD': '',
+#     'HOST':'localhost',
+#     'PORT':'3306',
+#     }
+# }
+
+# Melindungi file penting
+# 1. Install django-environ
+# 2. Create .env file and declare environ variables in it
+# 3. Initialise environ on settings.py 
+import environ
+env = environ.Env()
+environ.Env.read_env()
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+SECRET_KEY = env('SECRET_KEY')
 DATABASES = {
     'default': {
-    'ENGINE': 'django.db.backends.mysql',
-    'NAME': 'ind_80_dj5_jadual_vaksin',
-    'USER': 'root',
-    'PASSWORD': '',
-    'HOST':'localhost',
-    'PORT':'3306',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': env('DB_NAME'),
+        'USER': env('DB_USER'),
+        'PASSWORD': env('DB_PASSWORD'),
+        'PASSWORD': env('DB_HOST'),
+        'PASSWORD': env('DB_PORT'),
     }
 }
-
 # ----------------- Added new scripts ends -----------------
