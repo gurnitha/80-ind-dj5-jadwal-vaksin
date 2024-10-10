@@ -71,3 +71,12 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
 
         (venv312511) λ python manage.py check
         System check identified no issues (0 silenced).
+
+#### 4. Menseting absolute path untuk file media
+
+        modified:   README.md
+        modified:   config/settings.py
+        modified:   config/urls.py
+
+        (venv312511) λ python manage.py check
+        System check identified no issues (0 silenced).
