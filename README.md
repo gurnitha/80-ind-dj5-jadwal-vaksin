@@ -138,3 +138,51 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
 
         modified:   README.md
         modified:   config/settings.py
+
+#### 5. Mengganti database: dari mysql ke postgresql
+
+        # 1. Login ke postgres server
+        λ psql -U postgres
+        psql (16.2)
+        WARNING: Console code page (437) differs from Windows code page (1252)
+                 8-bit characters might not work correctly. See psql reference
+                 page "Notes for Windows users" for details.
+        Type "help" for help.
+
+        postgres=#
+
+        # 2. Membuat database
+        postgres=# CREATE DATABASE ind_80_dj5_jadual_vaksin;
+        CREATE DATABASE
+
+        # 3. Menginstal driver
+        (venv312511) λ python -m pip install psycopg2-binary
+        Collecting psycopg2-binary
+          Using cached psycopg2_binary-2.9.9-cp312-cp312-win_amd64.whl.metadata (4.6 kB)
+        Using cached psycopg2_binary-2.9.9-cp312-cp312-win_amd64.whl (1.2 MB)
+        Installing collected packages: psycopg2-binary
+        Successfully installed psycopg2-binary-2.9.9
+
+        # 4. Mendifinisikan environ variabel pada file .env
+        SECRET_KEY='django-insecure-@0l9(24a_h='-2-+&6n3dgs%*&)nk05(327n9&009gy$0m4un35'
+        DB_NAME='ind_80_dj5_jadual_vaksin'
+        DB_USER='posgres'
+        DB_PASSWORD='posgres'
+        DB_HOST='localhost'
+        DB_PORT='5432'
+
+        # 5. Mengganti DB ENGINE dari mysql ke postgresql_psycopg2
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.postgresql_psycopg2',
+                'NAME': env('DB_NAME'),
+                'USER': env('DB_USER'),
+                'PASSWORD': env('DB_PASSWORD'),
+                'PASSWORD': env('DB_HOST'),
+                'PASSWORD': env('DB_PORT'),
+            }
+        }
+
+        # 5. Testing
+        (venv312511) λ python manage.py check
+        System check identified no issues (0 silenced).

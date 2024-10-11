@@ -11,27 +11,28 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 import os
 
-# print(__file__)
-# print(os.path.dirname(__file__))
-# print(os.path.dirname(os.path.dirname(__file__)))
-
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Start langkah 1: Melindungi file penting
 import environ
 env = environ.Env()
 environ.Env.read_env()
-
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+# End langkah 1: Melindungi file penting
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = 'django-insecure-@0l9(24a_h=-2-+&6n3dgs%*&)nk05(327n9&009gy$0m4un35'
-# SECRET_KEY = env('SECRET_KEY')
+
+# Start langkah 2: Melindungi file penting
+SECRET_KEY = env('SECRET_KEY')
+# End langkah 2: Melindungi file penting
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -86,12 +87,12 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # Password validation
@@ -136,7 +137,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # ----------------- Added new scripts ----------------------
-
 # Menseting bahasa dan waktu
 LANGUAGE_CODE = 'id'
 TIME_ZONE = 'Asia/Jakarta'
@@ -151,30 +151,10 @@ MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
 
-# Menseting path untuk menghubungan proyek ke database
-# DATABASES = {
-#     'default': {
-#     'ENGINE': 'django.db.backends.mysql',
-#     'NAME': 'ind_80_dj5_jadual_vaksin',
-#     'USER': 'root',
-#     'PASSWORD': '',
-#     'HOST':'localhost',
-#     'PORT':'3306',
-#     }
-# }
-
-# Melindungi file penting
-# 1. Install django-environ
-# 2. Create .env file and declare environ variables in it
-# 3. Initialise environ on settings.py 
-import environ
-env = environ.Env()
-environ.Env.read_env()
-environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
-SECRET_KEY = env('SECRET_KEY')
+# Start langkah 3: Melindungi file penting
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': env('DB_NAME'),
         'USER': env('DB_USER'),
         'PASSWORD': env('DB_PASSWORD'),
@@ -182,4 +162,5 @@ DATABASES = {
         'PASSWORD': env('DB_PORT'),
     }
 }
+# End langkah 3: Melindungi file penting
 # ----------------- Added new scripts ends -----------------
