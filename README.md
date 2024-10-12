@@ -236,3 +236,9 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
         modified:   app/main/urls.py
         modified:   app/main/views.py
         new file:   templates/main/about.html
+
+#### 3. Mentautkan laman home dan laman about
+
+        modified:   README.md
+        modified:   templates/main/about.html
+        modified:   templates/main/index.html
