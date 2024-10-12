@@ -213,4 +213,8 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
         (venv312511) λ python manage.py check
         System check identified no issues (0 silenced).
 
+#### 3. Halo Dunia! Waktu Jakarta sekarang
 
+        modified:   README.md
+        modified:   app/main/views.py
+        modified:   config/urls.py

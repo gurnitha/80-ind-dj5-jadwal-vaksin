@@ -6,7 +6,12 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
+# my modules
+from app.main import views
+
 urlpatterns = [
+    # main
+    path('', views.halodunia),
     # admin
     path('admin/', admin.site.urls),
 
