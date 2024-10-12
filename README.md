@@ -191,3 +191,6 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
 ## 5. PROYEK DJANGO VS APLIKASI DJANGO
 
 
+## 6. APLIKASI DJANGO
+
+
