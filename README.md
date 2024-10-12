@@ -218,3 +218,6 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
         modified:   README.md
         modified:   app/main/views.py
         modified:   config/urls.py
+
+
+## 7. URLs, VIEWS, TEMPLATES
