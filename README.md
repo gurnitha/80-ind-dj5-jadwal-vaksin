@@ -221,3 +221,11 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
 
 
 ## 7. URLs, VIEWS, TEMPLATES
+
+#### 1. Membuat laman home
+
+        modified:   README.md
+        new file:   app/main/urls.py
+        modified:   app/main/views.py
+        modified:   config/urls.py
+        new file:   templates/main/index.html
