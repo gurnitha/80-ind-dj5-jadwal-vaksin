@@ -204,4 +204,13 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
         new file:   app/main/tests.py
         new file:   app/main/views.py
 
+#### 2. Mengintegrasikan aplikasi main dengan proyek
+
+        modified:   README.md
+        modified:   app/main/apps.py
+        modified:   config/settings.py
+
+        (venv312511) λ python manage.py check
+        System check identified no issues (0 silenced).
+
 
