@@ -261,3 +261,9 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
         modified:   templates/main/about.html
         modified:   templates/main/base_main.html
         modified:   templates/main/index.html
+
+#### 7. Loading file statis css
+
+        modified:   README.md
+        new file:   static/css/testing.css
+        modified:   templates/main/base_main.html
