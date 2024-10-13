@@ -1,5 +1,6 @@
 <!-- templates/main/index.html -->
 {% extends 'main/base_main.html' %}
+{% load static %}
 
 {% block title %} {{ title }} {% endblock title %}
 
@@ -9,5 +10,7 @@
 	<p>Orang bijak mengutamakan keselamatan diri dan orang lain.</p>
 
 	<h3>Title: {{ title }}</h3>
+
+	<img src="{% static 'images/homepage.png' %}" width="100%">
 
 {% endblock content %}
