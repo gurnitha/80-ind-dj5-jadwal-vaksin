@@ -254,3 +254,10 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
         modified:   templates/main/about.html
         new file:   templates/main/base_main.html
         modified:   templates/main/index.html
+
+#### 6. Block Super untuk page title
+
+        modified:   app/main/views.py
+        modified:   templates/main/about.html
+        modified:   templates/main/base_main.html
+        modified:   templates/main/index.html

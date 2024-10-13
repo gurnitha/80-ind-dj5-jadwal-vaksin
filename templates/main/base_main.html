@@ -3,7 +3,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Jadual Vaksin | Home</title>
+	<title>
+		Vaksin 80 |
+		{% block title %}
+			{{ block.super }}
+		{% endblock title %}
+	</title>
 </head>
 <body>
 	<nav>

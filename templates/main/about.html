@@ -1,8 +1,12 @@
 <!-- templates/main/about.html -->
 {% extends 'main/base_main.html' %}
 
+{% block title %} {{ title }} {% endblock title %}
+
 {% block content %}
 
 	<h1>Ini adalah Laman About</h1>
+
+	<h3>Title: {{ title }}</h3>
 
 {% endblock content %}
