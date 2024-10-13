@@ -242,3 +242,8 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
         modified:   README.md
         modified:   templates/main/about.html
         modified:   templates/main/index.html
+
+#### 4. Menggunakan tempate tags Django untuk mentautkan laman situs web
+
+        modified:   templates/main/about.html
+        modified:   templates/main/index.html
