@@ -272,3 +272,11 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
 
         new file:   static/images/homepage.png
         modified:   templates/main/index.html
+
+#### 9. Menggunakan include
+
+        modified:   README.md
+        modified:   static/css/testing.css
+        new file:   templates/inc/footer.html
+        new file:   templates/inc/navbar.html
+        modified:   templates/main/base_main.html
