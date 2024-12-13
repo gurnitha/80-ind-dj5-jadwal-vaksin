@@ -328,3 +328,9 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
 
         modified:   README.md
         modified:   config/urls.py
+
+#### 4. Custom User model part 1 - Membuat UserManager
+
+        modified:   README.md
+        modified:   apps/user/models.py
+        modified:   config/settings.py

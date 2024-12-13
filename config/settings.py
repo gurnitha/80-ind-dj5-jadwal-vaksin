@@ -145,6 +145,10 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # ----------------- Added new scripts ----------------------
+
+# Custom user model
+AUTH_USER_MODEL = 'user.User'
+
 # Menseting bahasa dan waktu
 LANGUAGE_CODE = 'id'
 TIME_ZONE = 'Asia/Jakarta'
