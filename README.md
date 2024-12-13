@@ -308,4 +308,13 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
 
 ## 8. USER MANAGEMENT
 
+#### 1. Membuat user app
 
+        modified:   README.md
+        new file:   apps/user/__init__.py
+        new file:   apps/user/admin.py
+        new file:   apps/user/apps.py
+        new file:   apps/user/migrations/__init__.py
+        new file:   apps/user/models.py
+        new file:   apps/user/tests.py
+        new file:   apps/user/views.py
