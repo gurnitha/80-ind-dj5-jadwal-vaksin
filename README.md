@@ -446,3 +446,7 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
         modified:   apps/user/admin.py
         new file:   apps/user/migrations/0001_initial.py
         modified:   apps/user/models.py
+
+#### 6. Signup part 1 - Create SignupForm
+
+        new file:   apps/user/forms.py
