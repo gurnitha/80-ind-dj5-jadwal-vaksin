@@ -323,3 +323,8 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
 
         modified:   README.md
         modified:   config/settings.py
+
+#### 3. House keeping: menambahkan url path untuk static file
+
+        modified:   README.md
+        modified:   config/urls.py
