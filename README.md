@@ -280,3 +280,29 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
         new file:   templates/inc/footer.html
         new file:   templates/inc/navbar.html
         modified:   templates/main/base_main.html
+
+#### 10. Membuat path untuk apps pada settings.py
+
+        modified:   README.md
+        renamed:    app/main/__init__.py -> apps/main/__init__.py
+        renamed:    app/main/admin.py -> apps/main/admin.py
+        renamed:    app/main/apps.py -> apps/main/apps.py
+        renamed:    app/main/migrations/__init__.py -> apps/main/migrations/__init__.py
+        renamed:    app/main/models.py -> apps/main/models.py
+        renamed:    app/main/tests.py -> apps/main/tests.py
+        renamed:    app/main/urls.py -> apps/main/urls.py
+        renamed:    app/main/views.py -> apps/main/views.py
+        modified:   config/settings.py
+        modified:   config/urls.py
+
+        Note:
+
+        1. I created this in settings.py
+        2. And modified the related files.
+
+        # ING: Defining path for apps
+        import os, sys 
+        APPS_DIR = str(os.path.join(BASE_DIR, 'apps'))
+        sys.path.insert(0, APPS_DIR)
+
+

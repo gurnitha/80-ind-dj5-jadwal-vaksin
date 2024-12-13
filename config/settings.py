@@ -38,6 +38,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# ING: Defining path for apps
+import os, sys 
+APPS_DIR = str(os.path.join(BASE_DIR, 'apps'))
+sys.path.insert(0, APPS_DIR)
 
 # Application definition
 
@@ -50,7 +54,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # my apps
-    'app.main.apps.MainConfig',
+    'main.apps.MainConfig',
 ]
 
 MIDDLEWARE = [

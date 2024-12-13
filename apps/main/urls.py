@@ -4,7 +4,7 @@
 from django.urls import path
 
 # my modules
-from app.main import views
+from main import views
 
 # app name
 app_name = 'main'
