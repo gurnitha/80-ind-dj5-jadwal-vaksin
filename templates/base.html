@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} Vaccine Schedule :: {% endblock title %}</title>
+    <!--    Favicon     -->
+    <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}" />
+    <!--    Bootstrap 5 CSS CDN Link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous" />
+    <!--    Fontawesome Icon CDN Link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--    Custom CSS Link -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+</head>
+<body>
+	<!-- Header -->
+	{% include 'inc/header.html' %}
+    <!-- Header ends -->
+
+    {% block content %}
+    {% endblock content %}
+
+
+    <!-- Footer -->
+    {% include 'inc/footer.html' %}
+    <!-- Footer ends -->
+    <!--    Bootstrap 5 JS CDN Link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>

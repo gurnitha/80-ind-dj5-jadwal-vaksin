@@ -458,3 +458,17 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
         modified:   apps/user/views.py
         modified:   config/urls.py
         new file:   templates/user/signup.html
+
+#### 8. Signup part 3 - Mengisi html template untuk laman sign up
+
+        modified:   README.md
+        modified:   apps/main/urls.py
+        modified:   apps/main/views.py
+        ...
+        modified:   templates/main/index.html
+        modified:   templates/user/signup.html
+
+        Note:
+
+        1. Add template for signup page.
+        2. Removed about page and its related files.
