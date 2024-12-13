@@ -318,3 +318,8 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
         new file:   apps/user/models.py
         new file:   apps/user/tests.py
         new file:   apps/user/views.py
+
+#### 2. Register user app pada proyek
+
+        modified:   README.md
+        modified:   config/settings.py
