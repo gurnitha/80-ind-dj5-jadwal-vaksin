@@ -450,3 +450,11 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
 #### 6. Signup part 1 - Create SignupForm
 
         new file:   apps/user/forms.py
+
+#### 7. Signup part 2 - Create urls, view dan template
+
+        modified:   README.md
+        new file:   apps/user/urls.py
+        modified:   apps/user/views.py
+        modified:   config/urls.py
+        new file:   templates/user/signup.html
