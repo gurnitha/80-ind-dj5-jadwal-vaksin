@@ -3,6 +3,7 @@
 # django modules
 from django.contrib.auth.forms import (
     UserCreationForm, AuthenticationForm,
+    PasswordChangeForm,
 )
 from django.contrib.auth import get_user_model
 
@@ -44,6 +45,22 @@ class LoginForm(AuthenticationForm):
     # Defin constructor (adding form-control class to each form field)
     def __init__(self, *args, **kwargs):
         super(LoginForm, self).__init__(*args, **kwargs)
+        for visible in self.visible_fields():
+            visible.field.widget.attrs["class"] = "form-control"
+
+    class Meta:
+        model = User
+        fields = "__all__"
+
+
+# Form: Change password form
+class ChangePasswordForm(PasswordChangeForm):
+    """
+    Form to change password
+    """
+
+    def __init__(self, *args, **kwargs):
+        super(ChangePasswordForm, self).__init__(*args, **kwargs)
         for visible in self.visible_fields():
             visible.field.widget.attrs["class"] = "form-control"
 

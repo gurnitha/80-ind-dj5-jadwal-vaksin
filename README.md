@@ -541,3 +541,8 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
         modified:   templates/inc/header.html
 
         :)
+
+#### 15. Change password part 1 - Membuat ChangePasswordForm
+
+        modified:   README.md
+        modified:   apps/user/forms.py
