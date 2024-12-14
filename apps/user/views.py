@@ -108,3 +108,8 @@ def logout(request):
     logger.info("Logged out successfully")
     messages.info(request, "Logged out successfully")
     return HttpResponseRedirect(reverse("user:login"))
+
+
+# View: Log out
+def change_password(request):
+    return render(request, "user/change-password.html")
