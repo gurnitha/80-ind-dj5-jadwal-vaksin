@@ -8,115 +8,30 @@
             <div class="card-body">
                 <h4>Fill the following details to create a new account</h4>
                 <form method="POST" action="" enctype="multipart/form-data">
-                    <input type="hidden" name="csrfmiddlewaretoken" value="gEnDBmBPJfQq0gbd3HxAwAbttDAOa0YidWzi1w7Efw6rE50TuvaBT0p2WKOB89kD"> 
-                    <div class="mb-2 row">
-                        <div class="col-sm-2">
-                            <label for="id_email">Email Address:</label>
-                        </div>
-                        <div class="col-sm-10 col-md-8 col-lg-6">
-                            <input type="email" name="email" maxlength="254" autofocus class="form-control" required id="id_email">
-                        </div>
+                  {% csrf_token %} 
+                  
+                  {% for field in form %}
+                  <div class="mb-2 row">
+
+                    <div class="col-sm-2">
+                      {{ field.label_tag }}
                     </div>
-                    <div class="mb-2 row">
-                        <div class="col-sm-2">
-                            <label for="id_first_name">First Name:</label>
-                        </div>
-                        <div class="col-sm-10 col-md-8 col-lg-6">
-                            <input type="text" name="first_name" maxlength="30" class="form-control" id="id_first_name">
-                        </div>
+
+                    <div class="col-sm-10 col-md-8 col-lg-6">
+                      {{ field }}
                     </div>
-                    <div class="mb-2 row">
-                        <div class="col-sm-2">
-                            <label for="id_middle_name">Middle Name:</label>
-                        </div>
-                        <div class="col-sm-10 col-md-8 col-lg-6">
-                            <input type="text" name="middle_name" maxlength="30" class="form-control" id="id_middle_name">
-                        </div>
-                    </div>
-                    <div class="mb-2 row">
-                        <div class="col-sm-2">
-                            <label for="id_last_name">Last Name:</label>
-                        </div>
-                        <div class="col-sm-10 col-md-8 col-lg-6">
-                            <input type="text" name="last_name" maxlength="30" class="form-control" id="id_last_name">
-                        </div>
-                    </div>
-                    <div class="mb-2 row">
-                        <div class="col-sm-2">
-                            <label for="id_date_of_birth">Date of Birth:</label>
-                        </div>
-                        <div class="col-sm-10 col-md-8 col-lg-6">
-                            <input type="text" name="date_of_birth" class="form-control" id="id_date_of_birth">
-                        </div>
-                        <span class="help offset-md-2">Enter Date in this Format: Year-Month-Day</span>
-                    </div>
-                    <div class="mb-2 row">
-                        <div class="col-sm-2">
-                            <label for="id_gender">Gender:</label>
-                        </div>
-                        <div class="col-sm-10 col-md-8 col-lg-6">
-                            <select name="gender" class="form-control" required id="id_gender">
-                                <option value="" selected>---------</option>
-                                <option value="M">Male</option>
-                                <option value="F">Female</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="mb-2 row">
-                        <div class="col-sm-2">
-                            <label for="id_photo">Profile Picture:</label>
-                        </div>
-                        <div class="col-sm-10 col-md-8 col-lg-6">
-                            <input type="file" name="photo" accept="image/*" class="form-control" required id="id_photo">
-                        </div>
-                    </div>
-                    <div class="mb-2 row">
-                        <div class="col-sm-2">
-                            <label for="id_identity_document_type">Identity Document Type:</label>
-                        </div>
-                        <div class="col-sm-10 col-md-8 col-lg-6">
-                            <select name="identity_document_type" class="form-control" required id="id_identity_document_type">
-                                <option value="" selected>---------</option>
-                                <option value="Voter Id">Voter ID</option>
-                                <option value="Passport">Passport</option>
-                                <option value="Citizenship Number">Citizenship Number</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="mb-2 row">
-                        <div class="col-sm-2">
-                            <label for="id_identity_document_number">Identity Document Number:</label>
-                        </div>
-                        <div class="col-sm-10 col-md-8 col-lg-6">
-                            <input type="text" name="identity_document_number" maxlength="32" class="form-control" required id="id_identity_document_number">
-                        </div>
-                    </div>
-                    <div class="mb-2 row">
-                        <div class="col-sm-2">
-                            <label for="id_password1">Password:</label>
-                        </div>
-                        <div class="col-sm-10 col-md-8 col-lg-6">
-                            <input type="password" name="password1" autocomplete="new-password" class="form-control" required id="id_password1">
-                        </div>
-                        <span class="help offset-md-2">
-                            <ul>
-                                <li>Your password can’t be too similar to your other personal information.</li>
-                                <li>Your password must contain at least 8 characters.</li>
-                                <li>Your password can’t be a commonly used password.</li>
-                                <li>Your password can’t be entirely numeric.</li>
-                            </ul>
-                        </span>
-                    </div>
-                    <div class="mb-2 row">
-                        <div class="col-sm-2">
-                            <label for="id_password2">Password confirmation:</label>
-                        </div>
-                        <div class="col-sm-10 col-md-8 col-lg-6">
-                            <input type="password" name="password2" autocomplete="new-password" class="form-control" required id="id_password2">
-                        </div>
-                        <span class="help offset-md-2">Enter the same password as before, for verification.</span>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Signup</button>
+
+                    {% if field.help_text %}
+                      <span class="help offset-md-2">{{ field.help_text|safe }}</span>
+                    {% endif %} 
+                    
+                    {% if form.errors %}
+                      <span class="offset-md-2">{{ field.errors }}</span>
+                    {% endif %}
+                  </div>
+                  {% endfor %}
+
+                  <button type="submit" class="btn btn-primary">Sign up</button>
                 </form>
             </div>
         </div>

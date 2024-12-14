@@ -472,3 +472,28 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
 
         1. Add template for signup page.
         2. Removed about page and its related files.
+
+#### 8. Signup part 4 - Menambahkan logika pada signup view
+
+        modified:   README.md
+        modified:   apps/user/views.py
+        new file:   media/profileImage/color-30.PNG
+        ...
+        new file:   media/profileImage/logo-6.PNG
+        modified:   templates/base.html
+        new file:   templates/inc/messages.html
+        modified:   templates/user/signup.html
+        new file:   templates/user/signup_ori.html
+
+        Note:
+
+        1. Sukses signup a new user tanpa verifikasi email.
+
+        :)
+
+        # Hasil
+        ind_80_dj5_jadual_vaksin=# SELECT id, email, first_name, middle_name, last_name FROM user_user WHERE id=11;
+         id |         email         | first_name | middle_name | last_name
+        ----+-----------------------+------------+-------------+-----------
+         11 | testnewuser7@mail.com | test       | new         | user7
+        (1 row)
