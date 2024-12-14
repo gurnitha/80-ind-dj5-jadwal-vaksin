@@ -553,3 +553,8 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
         modified:   apps/user/urls.py
         modified:   apps/user/views.py
         new file:   templates/user/change-password.html
+
+#### 17. Change password part 3 - Add html tamplatge pada laman change-password
+
+        modified:   README.md
+        modified:   templates/user/change-password.html
