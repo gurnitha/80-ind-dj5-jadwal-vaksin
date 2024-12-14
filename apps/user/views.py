@@ -15,7 +15,7 @@ import logging
 logger = logging.getLogger("django")
 
 # my modules
-from user.forms import SignupForm, LoginForm
+from user.forms import SignupForm, LoginForm, ChangePasswordForm
 
 # Create your views here.
 
@@ -112,4 +112,40 @@ def logout(request):
 
 # View: Log out
 def change_password(request):
-    return render(request, "user/change-password.html")
+    """
+    Changes the password of the user
+    """
+
+    # 1. Handling POST request
+    if request.method == "POST":
+
+        # 1.1. Get data sent by the logged in user
+        form = ChangePasswordForm(request.user, request.POST)
+
+        # 1.1.1. If sent data is valid
+        if form.is_valid():
+            # Save data
+            form.save()
+            # Update session/the form
+            update_session_auth_hash(request, form.user)
+            # Send messages
+            logger.info("Password Changed")
+            messages.success(request, "Password Changed Successfully")
+            # Redirect user after changing its password
+            return HttpResponseRedirect(reverse("user:login"))
+
+        # 1.1.2. If sent data is not valid
+        else:
+            logger.error("Invalid Data")
+            messages.error(
+                request, "Unable to change password! Please enter valid data"
+            )
+            return render(request, "user/change-password.html", {"form": form})
+
+    # 2. Handling GET request
+    else:
+        form = ChangePasswordForm(request.user)
+    
+    context = {"form":form}
+    
+    return render(request, "user/change-password.html", context)
