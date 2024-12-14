@@ -516,3 +516,8 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
         modified:   README.md
         modified:   apps/user/views.py
         modified:   templates/user/login.html
+
+#### 12. Login part 4 - Menambahkan html template pada laman login
+
+        modified:   README.md
+        modified:   templates/user/login.html
