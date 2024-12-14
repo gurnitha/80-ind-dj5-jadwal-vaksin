@@ -684,3 +684,14 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
         Email verified.
 
         :)
+
+#### 38. Password reset
+
+        modified:   config/urls.py
+        modified:   templates/inc/header.html
+
+        Testing: sukses.
+
+        Note: using defautl django reset passowrd.
+
+        :)
