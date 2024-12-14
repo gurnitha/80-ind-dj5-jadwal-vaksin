@@ -11,7 +11,7 @@ from django.contrib.auth import (
     logout as user_logout,
     update_session_auth_hash,
 )
-
+from django.contrib.auth.decorators import login_required
 import logging
 logger = logging.getLogger("django")
 
@@ -153,6 +153,7 @@ def change_password(request):
 
 
 # View: Profile
+@login_required
 def profile(request):
     # Get user information form the logged in user
     user = request.user

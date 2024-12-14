@@ -604,3 +604,10 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
         modified:   templates/base.html
         modified:   templates/inc/header.html
         modified:   templates/inc/messages.html
+
+#### 25. Profile part 5 - Melindungi laman profile
+
+        modified:   README.md
+        modified:   apps/user/views.py
+
+        :)
