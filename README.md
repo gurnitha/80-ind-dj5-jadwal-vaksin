@@ -611,3 +611,8 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
         modified:   apps/user/views.py
 
         :)
+
+#### 26. Profile update part 1 - Membuat ProfileUpdateForm
+
+        modified:   README.md
+        modified:   apps/user/forms.py
