@@ -563,3 +563,14 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
 
         modified:   README.md
         modified:   apps/user/views.py
+
+#### 19. Change password part 5 - Mendefinisikan tamplate tags pada laman change-password untuk change-password
+
+        modified:   apps/user/views.py
+        modified:   templates/user/change-password.html
+
+        Note:
+
+        1. Sukses change-password.
+
+        :)

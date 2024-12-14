@@ -9,6 +9,7 @@ from django.contrib.auth import (
     authenticate,
     login as user_login,
     logout as user_logout,
+    update_session_auth_hash,
 )
 
 import logging
