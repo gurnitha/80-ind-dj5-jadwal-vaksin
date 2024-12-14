@@ -631,3 +631,8 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
 
         modified:   README.md
         modified:   templates/user/profile-update.html
+
+#### 29. Profile update part 4 - Add logika pada profile update view
+
+        modified:   README.md
+        modified:   apps/user/views.py

@@ -16,7 +16,10 @@ import logging
 logger = logging.getLogger("django")
 
 # my modules
-from user.forms import SignupForm, LoginForm, ChangePasswordForm
+from user.forms import(
+    SignupForm, LoginForm, 
+    ChangePasswordForm, ProfileUpdateForm,
+)
 
 # Create your views here.
 
@@ -163,4 +166,31 @@ def profile(request):
 
 # View: Profile update
 def profile_update(request):
-    return render(request, "user/profile-update.html")
+    """
+    Updates the profile information of user
+    """
+
+    # 1. Handling POST request
+    if request.method == 'POST':
+        # Get data sent by the logged in user
+        form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user)
+
+        # If sent data is valid return to user profile
+        if form.is_valid():
+            logger.info('Profile information updated')
+            messages.success(request, 'Profile information updated successfully')
+            return HttpResponseRedirect(reverse('user:profile'))
+
+        # If sent data is not valid
+        else:
+            logger.error('Invalid data')
+            messages.error(request, 'Please enter correct data')
+            return render(request, 'user/profile-update.html', {'form':form})
+
+    # 2. Handing GET request
+    else:
+        form = ProfileUpdateForm(instance=request.user)
+
+    context = {'form':form}
+
+    return render(request, "user/profile-update.html", context)
