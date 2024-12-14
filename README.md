@@ -574,3 +574,10 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
         1. Sukses change-password.
 
         :)
+
+#### 20. Profile part 1 - urls, views, templates
+
+        modified:   README.md
+        modified:   apps/user/urls.py
+        modified:   apps/user/views.py
+        new file:   templates/user/profile.html

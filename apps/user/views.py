@@ -150,3 +150,8 @@ def change_password(request):
     context = {"form":form}
     
     return render(request, "user/change-password.html", context)
+
+
+# View: Profile
+def profile(request):
+    return render(request, "user/profile.html")
