@@ -154,4 +154,7 @@ def change_password(request):
 
 # View: Profile
 def profile(request):
-    return render(request, "user/profile.html")
+    # Get user information form the logged in user
+    user = request.user
+    context = {'user':user}
+    return render(request, "user/profile.html", context)

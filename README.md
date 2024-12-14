@@ -586,3 +586,8 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
 
         modified:   README.md
         modified:   templates/user/profile.html
+
+#### 22. Profile part 3 - Membuat logika pada view profile
+
+        modified:   README.md
+        modified:   apps/user/views.py
