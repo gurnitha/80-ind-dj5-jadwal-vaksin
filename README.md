@@ -510,3 +510,9 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
         modified:   apps/user/urls.py
         modified:   apps/user/views.py
         modified:   templates/inc/header.html
+
+#### 11. Login part 3 - Menggunakan LoginForm pada login view
+
+        modified:   README.md
+        modified:   apps/user/views.py
+        modified:   templates/user/login.html

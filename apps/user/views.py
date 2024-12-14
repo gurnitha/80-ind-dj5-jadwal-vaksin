@@ -5,6 +5,13 @@ from django.shortcuts import render
 from django.urls import reverse
 from django.contrib import messages
 from django.http import HttpResponseRedirect
+from django.contrib.auth import (
+    authenticate,
+    login as user_login,
+)
+
+import logging
+logger = logging.getLogger("django")
 
 # my modules
 from user.forms import SignupForm, LoginForm
@@ -43,4 +50,50 @@ def signup(request):
 
 # View: Log in
 def login(request):
-    return render(request, "user/login.html")
+    """
+    Login the user if the given email and password are valid
+    """
+
+    # 1. Handling POST request
+    if request.method == "POST":
+
+        # 1.1 Get sent data from the form
+        form = LoginForm(request, request.POST)
+        
+        # 1.2. Validate sent data
+
+        # 1.2.1. If sent data is valid
+        if form.is_valid():
+            # 1.2.1.1. Clean data
+            email = form.cleaned_data["username"] # refer to custome user
+            password = form.cleaned_data["password"]
+           
+            # 1.2.1.2. Authenticate the email and password
+            user = authenticate(email=email, password=password)
+            
+            # 1.2.1.3 if user exists in db
+            if user is not None:
+                user_login(request, user)
+                logger.info("User Logged in")
+                messages.success(request, "Logged in Successfully")
+                return HttpResponseRedirect(reverse("main:home"))
+            
+            # 1.2.1.4. If user is not exists in db
+            else:
+                logger.error("User is None")
+                messages.error(request, "Invalid Login! Please enter correct data")
+                return HttpResponseRedirect(reverse("user:login"))
+        
+        # 1.2.2. If sent data is not valid
+        else:
+            logger.error("Invalid Username and Passsword")
+            messages.error(request, "Please Enter Correct Username and Password")
+            return render(request, "user/login.html", {"form": form})
+    
+    # 2. Handling GET request
+    else:
+        form = LoginForm()
+    
+    context = {"form": form}
+    
+    return render(request, "user/login.html", context)
