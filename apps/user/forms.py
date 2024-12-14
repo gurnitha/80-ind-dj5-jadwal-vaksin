@@ -2,7 +2,7 @@
 
 # django modules
 from django.contrib.auth.forms import (
-    UserCreationForm,
+    UserCreationForm, AuthenticationForm,
 )
 from django.contrib.auth import get_user_model
 
@@ -33,3 +33,20 @@ class SignupForm(UserCreationForm):
             "identity_document_type",
             "identity_document_number",
         ]
+
+
+# Form: Login form
+class LoginForm(AuthenticationForm):
+    """
+    Form to authenticate the user
+    """
+
+    # Defin constructor (adding form-control class to each form field)
+    def __init__(self, *args, **kwargs):
+        super(LoginForm, self).__init__(*args, **kwargs)
+        for visible in self.visible_fields():
+            visible.field.widget.attrs["class"] = "form-control"
+
+    class Meta:
+        model = User
+        fields = "__all__"

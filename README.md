@@ -497,3 +497,9 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
         ----+-----------------------+------------+-------------+-----------
          11 | testnewuser7@mail.com | test       | new         | user7
         (1 row)
+
+#### 9. Login part 1 - Membuat LoginForm
+
+        modified:   README.md
+        modified:   apps/user/forms.py
+        new file:   templates/user/login.html
