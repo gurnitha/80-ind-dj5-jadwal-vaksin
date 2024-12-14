@@ -636,3 +636,8 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
 
         modified:   README.md
         modified:   apps/user/views.py
+
+#### 30. Profile update part 5 - Fetch data to update profile
+
+        modified:   README.md
+        modified:   apps/user/views.py

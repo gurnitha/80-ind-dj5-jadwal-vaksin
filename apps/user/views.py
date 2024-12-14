@@ -175,8 +175,9 @@ def profile_update(request):
         # Get data sent by the logged in user
         form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user)
 
-        # If sent data is valid return to user profile
+        # If sent data is valid, save it to db and return to user profile
         if form.is_valid():
+            form.save()
             logger.info('Profile information updated')
             messages.success(request, 'Profile information updated successfully')
             return HttpResponseRedirect(reverse('user:profile'))
