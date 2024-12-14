@@ -661,3 +661,8 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
 
         modified:   README.md
         modified:   config/settings.py
+
+#### 35. Email verification part 5 - Create email_verification_request view
+
+        modified:   README.md
+        modified:   apps/user/views.py

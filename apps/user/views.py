@@ -1,10 +1,15 @@
 # apps/user/views.py
 
 # django modules
+from django.http import (
+    HttpResponseRedirect,
+    HttpResponse,
+    HttpResponseForbidden,
+    HttpResponseBadRequest,
+)
 from django.shortcuts import render
 from django.urls import reverse
 from django.contrib import messages
-from django.http import HttpResponseRedirect
 from django.contrib.auth import (
     authenticate,
     login as user_login,
@@ -12,6 +17,9 @@ from django.contrib.auth import (
     update_session_auth_hash,
 )
 from django.contrib.auth.decorators import login_required
+from django.utils.http import urlsafe_base64_decode
+from django.utils.encoding import force_str
+
 import logging
 logger = logging.getLogger("django")
 
@@ -20,6 +28,8 @@ from user.forms import(
     SignupForm, LoginForm, 
     ChangePasswordForm, ProfileUpdateForm,
 )
+from user.utils import EmailVerificationTokenGenerator
+from user.email import send_email_verification
 
 # Create your views here.
 
@@ -195,3 +205,18 @@ def profile_update(request):
     context = {'form':form}
 
     return render(request, "user/profile-update.html", context)
+
+
+# View: Email verification request
+@login_required
+def email_verification_request(request):
+    """
+    Handles the request for email verification
+    """
+    if not request.user.is_email_verified:
+        send_email_verification(request, request.user.id)
+        logger.info("Email Verification Link Sent")
+        return HttpResponse("Email Verification Link sent to your email address")
+    else:
+        logger.warning("Email Already Verified")
+        return HttpResponseForbidden("Email Already Verified")
