@@ -16,19 +16,19 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--    Custom CSS Link -->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/dropdown.css' %}" />
 </head>
 <body>
     <!-- Header -->
     {% include 'inc/header.html' %}
     <!-- Header ends -->
     
-    <!-- Messages -->
-    {% include 'inc/messages.html' %}
-    <!-- Messages ends -->
-
+        
+        <!-- Messages -->
+        {% include 'inc/messages.html' %}
+        <!-- Messages ends -->  
     {% block content %}
     {% endblock content %}
-
 
     <!-- Footer -->
     {% include 'inc/footer.html' %}

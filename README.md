@@ -596,3 +596,11 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
 
         modified:   README.md
         modified:   templates/user/profile.html
+
+#### 24. Menu - Add dropdown menu
+
+        modified:   README.md
+        new file:   static/css/dropdown.css
+        modified:   templates/base.html
+        modified:   templates/inc/header.html
+        modified:   templates/inc/messages.html
