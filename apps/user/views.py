@@ -7,8 +7,7 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 
 # my modules
-from user.forms import SignupForm
-# from user.email import send_email_verification
+from user.forms import SignupForm, LoginForm
 
 # Create your views here.
 
@@ -40,3 +39,8 @@ def signup(request):
     context = {"form": form}
     
     return render(request, "user/signup.html", context)
+
+
+# View: Log in
+def login(request):
+    return render(request, "user/login.html")

@@ -503,3 +503,10 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
         modified:   README.md
         modified:   apps/user/forms.py
         new file:   templates/user/login.html
+
+#### 10. Login part 2 - Membuat urls, views, dan template
+
+        modified:   README.md
+        modified:   apps/user/urls.py
+        modified:   apps/user/views.py
+        modified:   templates/inc/header.html
