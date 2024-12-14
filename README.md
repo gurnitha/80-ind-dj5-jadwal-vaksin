@@ -521,3 +521,14 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
 
         modified:   README.md
         modified:   templates/user/login.html
+
+#### 13. Login part 5 - Menggunakan template tags pada laman login untuk login
+
+        modified:   README.md
+        modified:   templates/user/login.html
+
+        Note:
+
+        1. Login sukses.
+
+        :)
