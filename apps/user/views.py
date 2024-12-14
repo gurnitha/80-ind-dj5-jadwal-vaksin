@@ -8,6 +8,7 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth import (
     authenticate,
     login as user_login,
+    logout as user_logout,
 )
 
 import logging
@@ -97,3 +98,13 @@ def login(request):
     context = {"form": form}
     
     return render(request, "user/login.html", context)
+
+# View: Log out
+def logout(request):
+    """
+    Logout the user from the current session
+    """
+    user_logout(request)
+    logger.info("Logged out successfully")
+    messages.info(request, "Logged out successfully")
+    return HttpResponseRedirect(reverse("user:login"))

@@ -16,12 +16,22 @@
                             <a class="nav-link" aria-current="page" href="/"><i class="fas fa-home"></i>
                             Home </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'user:login' %}"><i class="fas fa-sign-in-alt"></i> Login</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'user:signup' %}"><i class="fas fa-plus"></i> Signup</a>
-                        </li>
+
+                        {% if request.user.is_authenticated %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="">{{ user.email }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'user:logout' %}"><i class="fas fa-sign-in-alt"></i> Logout</a>
+                            </li>
+                        {% else %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'user:login' %}"><i class="fas fa-sign-in-alt"></i> Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'user:signup' %}"><i class="fas fa-plus"></i> Signup</a>
+                            </li>
+                        {% endif %}
                         <li class="nav-item">
                             <form action="/i18n/setlang/" method="post" class="d-flex justify-content-center align-items-center">
                                 <input type="hidden" name="csrfmiddlewaretoken" value="gEnDBmBPJfQq0gbd3HxAwAbttDAOa0YidWzi1w7Efw6rE50TuvaBT0p2WKOB89kD">

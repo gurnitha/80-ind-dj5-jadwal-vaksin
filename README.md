@@ -532,3 +532,12 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
         1. Login sukses.
 
         :)
+
+#### 14. Logout
+
+        modified:   README.md
+        modified:   apps/user/urls.py
+        modified:   apps/user/views.py
+        modified:   templates/inc/header.html
+
+        :)
