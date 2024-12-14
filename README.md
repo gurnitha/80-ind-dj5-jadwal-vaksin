@@ -672,3 +672,15 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
         modified:   README.md
         modified:   apps/user/views.py
         renamed:    templates/user/mail-verify.html -> templates/user/email-verify.html
+
+#### 37. Email verification part 7 - Create urls
+
+        modified:   README.md
+        modified:   apps/user/urls.py
+        modified:   templates/user/profile.html
+
+        Testing:
+
+        Email verified.
+
+        :)

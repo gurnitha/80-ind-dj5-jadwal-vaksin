@@ -15,4 +15,6 @@ urlpatterns = [
     path("change-password/", views.change_password, name="change-password"),
     path("profile/", views.profile, name="profile"),
     path("profile-update/", views.profile_update, name="profile-update"),
+    path("verify-email/", views.email_verification_request, name="verify-email"),
+    path("email/activate/<uidb64>/<token>/", views.email_verifier, name="email-activate"),
 ]
