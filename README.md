@@ -626,3 +626,8 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
         modified:   templates/inc/header.html
         new file:   templates/user/profile-update.html
         modified:   templates/user/profile.html
+
+#### 28. Profile update part 3 - Add html template pada laman update profile
+
+        modified:   README.md
+        modified:   templates/user/profile-update.html
