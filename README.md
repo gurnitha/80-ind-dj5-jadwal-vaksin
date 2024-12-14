@@ -646,3 +646,9 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
 
         modified:   README.md
         new file:   apps/user/utils.py
+
+#### 32. Email verification part 2 - Create send_email_verification
+
+        modified:   README.md
+        new file:   apps/user/email.py
+
