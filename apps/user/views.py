@@ -159,3 +159,8 @@ def profile(request):
     user = request.user
     context = {'user':user}
     return render(request, "user/profile.html", context)
+
+
+# View: Profile update
+def profile_update(request):
+    return render(request, "user/profile-update.html")

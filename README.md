@@ -616,3 +616,13 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
 
         modified:   README.md
         modified:   apps/user/forms.py
+
+        :)
+
+#### 27. Profile update part 2 - urls, views, templates
+
+        modified:   apps/user/urls.py
+        modified:   apps/user/views.py
+        modified:   templates/inc/header.html
+        new file:   templates/user/profile-update.html
+        modified:   templates/user/profile.html
