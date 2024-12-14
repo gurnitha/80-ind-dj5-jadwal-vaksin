@@ -30,6 +30,7 @@ from user.forms import(
 )
 from user.utils import EmailVerificationTokenGenerator
 from user.email import send_email_verification
+from user.models import User 
 
 # Create your views here.
 
@@ -220,3 +221,29 @@ def email_verification_request(request):
     else:
         logger.warning("Email Already Verified")
         return HttpResponseForbidden("Email Already Verified")
+
+
+# View: Email verifier
+def email_verifier(request, uidb64, token):
+    """
+    Checks the verification link and verifies the user
+    """
+    try:
+        uid = force_str(urlsafe_base64_decode(uidb64))
+        user = User.objects.get(pk=uid)
+    except (TypeError, ValueError, OverflowError, User.DoesNotExist):
+        user = None
+    if user == request.user:
+        if EmailVerificationTokenGenerator.check_token(user, token):
+            user.is_email_verified = True
+            user.save()
+            logger.info("Account Verified")
+            messages.success(request, "Email Address Verified Successfully")
+            return HttpResponseRedirect(reverse("user:profile"))
+        else:
+            logger.warning("Activation Link is invalid")
+            return HttpResponseBadRequest("Activation link is invalid!")
+    else:
+        return HttpResponseForbidden(
+            content="You don't have permission to use this link"
+        )
