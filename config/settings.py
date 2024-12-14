@@ -175,4 +175,8 @@ DATABASES = {
     }
 }
 # End langkah 3: Melindungi file penting
+
+# Email Configuration
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
 # ----------------- Added new scripts ends -----------------

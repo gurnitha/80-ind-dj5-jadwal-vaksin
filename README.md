@@ -656,3 +656,8 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
 
         modified:   README.md
         new file:   templates/user/mail-verify.html
+
+#### 34. Email verification part 4 - EMAIL_BACKEND
+
+        modified:   README.md
+        modified:   config/settings.py
