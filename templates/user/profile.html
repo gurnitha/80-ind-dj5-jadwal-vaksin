@@ -13,7 +13,11 @@
                 </h5>
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 col-lg-4">
+
+                        <div class="col-12 col-lg-4" style="width: 250px; height: 250px;">
+                            {% if user.photo %}
+                                <img src="{{ user.photo.url }}" alt="Profile picture" class="profile-img">
+                            {% endif %}
                         </div>
                         <div class="col-12 col-lg-8">
                             <div class="row mb-1">
@@ -24,24 +28,28 @@
                                     Email Address
                                 </div>
                                 <div class="col-7 col-sm-8">
-                                    admin@mail.com
-                                    (<a href="/accounts/verify-email/">Verify Email</a>)
+                                    {{ user.email }}
+                                    {% if user.is_email_verified %}
+                                    <i>(Email verified)</i>
+                                    {% else %}
+                                    (<a href="">Verify Email</a>)
+                                    {% endif %}
                                 </div>
                             </div>
                             <div class="row mb-1">
                                 <div class="col-5 col-sm-4 fw-bold">
-                                    First Name
+                                    First name
                                 </div>
                                 <div class="col-7 col-sm-8">
-                                    super
+                                    {{ user.first_name }}
                                 </div>
                             </div>
                             <div class="row mb-1">
                                 <div class="col-5 col-sm-4 fw-bold">
-                                    Middle Name
+                                    Middle name
                                 </div>
                                 <div class="col-7 col-sm-8">
-                                    None
+                                    {{ user.middle_name }}
                                 </div>
                             </div>
                             <div class="row mb-1">
@@ -49,7 +57,7 @@
                                     Last Name
                                 </div>
                                 <div class="col-7 col-sm-8">
-                                    user
+                                    {{ user.last_name }}
                                 </div>
                             </div>
                             <div class="row mb-1">
@@ -57,7 +65,7 @@
                                     Date of Birth
                                 </div>
                                 <div class="col-7 col-sm-8">
-                                    None
+                                    {{ user.date_of_birth }}
                                 </div>
                             </div>
                             <div class="row mb-1">
@@ -65,7 +73,7 @@
                                     Gender
                                 </div>
                                 <div class="col-7 col-sm-8">
-                                    None
+                                    {{ user.gender }}
                                 </div>
                             </div>
                             <div class="row mb-1">
@@ -73,7 +81,7 @@
                                     Identity Document Type
                                 </div>
                                 <div class="col-7 col-sm-8">
-                                    None
+                                    {{ user.identity_document_type }}
                                 </div>
                             </div>
                             <div class="row mb-1">
@@ -81,6 +89,7 @@
                                     Identity Document Number
                                 </div>
                                 <div class="col-7 col-sm-8">
+                                    {{ user.identity_document_number }}
                                 </div>
                             </div>
                             <div class="row mb-1">
@@ -88,7 +97,7 @@
                                     Date Joined
                                 </div>
                                 <div class="col-7 col-sm-8">
-                                    Dec. 13, 2024, 10:03 p.m.
+                                    {{ user.date_joined }}
                                 </div>
                             </div>
                             <div class="row mb-1 btn-container">
@@ -98,7 +107,7 @@
                                     Update Profile</a>
                                     </button>
                                     <button class="btn btn-sm btn-danger m-1">
-                                    <a href="/accounts/change-password/"><i class="fas fa-pen"></i>
+                                    <a href="{% url 'user:change-password' %}"><i class="fas fa-pen"></i>
                                     Change Password</a>
                                     </button>
                                 </div>

@@ -591,3 +591,8 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
 
         modified:   README.md
         modified:   apps/user/views.py
+
+#### 23. Profile part 4 - Fetch user data pada laman profile
+
+        modified:   README.md
+        modified:   templates/user/profile.html
