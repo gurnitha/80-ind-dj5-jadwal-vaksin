@@ -641,3 +641,8 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
 
         modified:   README.md
         modified:   apps/user/views.py
+
+#### 31. Email verification part 1 - Create utility of TokenGenerator
+
+        modified:   README.md
+        new file:   apps/user/utils.py
