@@ -1,3 +1,113 @@
 <!-- templates/user/profile.html -->
 
-PROFILE
+{% extends 'base.html' %}
+{% block title %}{{ block.super }} Profile {% endblock title %}
+
+{% block content %}
+
+    <div class="container main-content mt-2 p-2">
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title mb-4">
+                    <i class="fas fa-user"></i> Profile Details
+                </h5>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-4">
+                        </div>
+                        <div class="col-12 col-lg-8">
+                            <div class="row mb-1">
+                                <p>Here is your profile details. Please keep your details updated.</p>
+                            </div>
+                            <div class="row mb-1">
+                                <div class="col-5 col-sm-4 fw-bold">
+                                    Email Address
+                                </div>
+                                <div class="col-7 col-sm-8">
+                                    admin@mail.com
+                                    (<a href="/accounts/verify-email/">Verify Email</a>)
+                                </div>
+                            </div>
+                            <div class="row mb-1">
+                                <div class="col-5 col-sm-4 fw-bold">
+                                    First Name
+                                </div>
+                                <div class="col-7 col-sm-8">
+                                    super
+                                </div>
+                            </div>
+                            <div class="row mb-1">
+                                <div class="col-5 col-sm-4 fw-bold">
+                                    Middle Name
+                                </div>
+                                <div class="col-7 col-sm-8">
+                                    None
+                                </div>
+                            </div>
+                            <div class="row mb-1">
+                                <div class="col-5 col-sm-4 fw-bold">
+                                    Last Name
+                                </div>
+                                <div class="col-7 col-sm-8">
+                                    user
+                                </div>
+                            </div>
+                            <div class="row mb-1">
+                                <div class="col-5 col-sm-4 fw-bold">
+                                    Date of Birth
+                                </div>
+                                <div class="col-7 col-sm-8">
+                                    None
+                                </div>
+                            </div>
+                            <div class="row mb-1">
+                                <div class="col-5 col-sm-4 fw-bold">
+                                    Gender
+                                </div>
+                                <div class="col-7 col-sm-8">
+                                    None
+                                </div>
+                            </div>
+                            <div class="row mb-1">
+                                <div class="col-5 col-sm-4 fw-bold">
+                                    Identity Document Type
+                                </div>
+                                <div class="col-7 col-sm-8">
+                                    None
+                                </div>
+                            </div>
+                            <div class="row mb-1">
+                                <div class="col-5 col-sm-4 fw-bold">
+                                    Identity Document Number
+                                </div>
+                                <div class="col-7 col-sm-8">
+                                </div>
+                            </div>
+                            <div class="row mb-1">
+                                <div class="col-5 col-sm-4 fw-bold">
+                                    Date Joined
+                                </div>
+                                <div class="col-7 col-sm-8">
+                                    Dec. 13, 2024, 10:03 p.m.
+                                </div>
+                            </div>
+                            <div class="row mb-1 btn-container">
+                                <div class="col-12">
+                                    <button class="btn btn-sm btn-success m-1">
+                                    <a href="/accounts/profile-update/"><i class="fas fa-pen"></i>
+                                    Update Profile</a>
+                                    </button>
+                                    <button class="btn btn-sm btn-danger m-1">
+                                    <a href="/accounts/change-password/"><i class="fas fa-pen"></i>
+                                    Change Password</a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

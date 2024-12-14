@@ -581,3 +581,8 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
         modified:   apps/user/urls.py
         modified:   apps/user/views.py
         new file:   templates/user/profile.html
+
+#### 21. Profile part 2 - Add html template pada laman profile
+
+        modified:   README.md
+        modified:   templates/user/profile.html
