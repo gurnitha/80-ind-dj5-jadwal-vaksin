@@ -1,0 +1,7 @@
+<!-- templates/user/email-verify.html -->
+
+{% autoescape off %}  
+Hi {{ full_name }},  
+Please click on the link to verfy your email,  
+http://{{ domain }}{% url 'user:email-activate' uidb64=uid token=token %}  
+{% endautoescape %}  

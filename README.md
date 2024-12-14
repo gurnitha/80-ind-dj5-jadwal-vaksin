@@ -652,3 +652,7 @@ Proyek:C:\Users\ING\Desktop\workspace\80-ind-dj5-jadual-vaksin
         modified:   README.md
         new file:   apps/user/email.py
 
+#### 33. Email verification part 3 - Create laman email-verify
+
+        modified:   README.md
+        new file:   templates/user/mail-verify.html
